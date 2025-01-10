@@ -47,21 +47,21 @@ def main():
     """
     Main function for the Streamlit app.
     """
-    st.title("AI-Powered XLSX Q&A")
+    st.title("Excel Q&A with AI chatbot")
     st.write("Upload an Excel file and ask questions about its data.")
 
     # File upload
-    uploaded_file = st.file_uploader("Upload XLSX", type=["xlsx"])
+    uploaded_file = st.file_uploader("Upload your excel file", type=["xlsx"])
 
     if uploaded_file is not None:
-        with st.spinner("Reading and indexing file..."):
+        with st.spinner("Reading and indexing..."):
             text = extract_text_from_excel(uploaded_file)
-            st.success("File processed successfully!")
+            st.success("File read successfully!")
 
         # Question input
-        question = st.text_input("Ask a question about the data:")
+        question = st.text_input("Ask a question regarding the data:")
         if question:
-            with st.spinner("Generating answer..."):
+            with st.spinner("Generating..."):
                 answer = query_gemini_api(text, question)
                 st.markdown(f"**Answer:** {answer}")
 
