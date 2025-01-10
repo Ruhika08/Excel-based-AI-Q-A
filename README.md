@@ -20,6 +20,8 @@ This project is a **Streamlit-based application** that allows users to upload an
 ├── requirements.txt   # Python dependencies
 ├── .env               # Environment variables (API keys)
 ├── README.md          # Project documentation (this file)
+├── .gitignore         # Files and directories to be ignored by Git
+├── Dockerfile         # Docker configuration for deployment
 ```
 
 ---
@@ -96,4 +98,13 @@ This will open the Streamlit app in your default web browser.
 - **Error: 'GenerateContentResponse' object has no attribute 'result'**
   - Update your code to use `response.responses[0].text`.
 
+---
 
+## 📜 License
+This project is licensed under the MIT License.
+
+---
+
+## Developed by Ruhika Joshi
+
+---
